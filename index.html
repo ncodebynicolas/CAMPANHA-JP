@@ -6,6 +6,10 @@
   <title>Campanha | Supermercado JP</title>
   <link rel="icon" href="./ASSETS/favicon.png" type="image/png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
@@ -34,9 +38,18 @@
         </div>
 
         <nav class="flex flex-col gap-2 text-white text-base sm:text-lg md:flex-row md:items-center md:gap-6">
-          <a class="hover:underline" href="#">Encontre nossas lojas</a>
-          <a class="hover:underline" href="#">Nossa história</a>
-          <a class="hover:underline" href="#">Trabalhe conosco</a>
+        <a class="relative hover:text-white transition-colors group" href="./PAGES/lojas.html">
+          Encontre Nossas Lojas
+          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a class="relative hover:text-white transition-colors group" href="./PAGES/sobre.html">
+          Nossa História
+          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a class="relative hover:text-white transition-colors group" href="./PAGES/trabalhe.html">
+          Trabalhe Conosco
+          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
+        </a>
         </nav>
 
         <div class="hidden md:flex md:items-center md:gap-4 md:text-2xl md:text-white">
@@ -57,14 +70,14 @@
   <!-- MAIN PRINCIPAL -->
   <main class="mx-auto max-w-6xl px-4 py-6">
     <section>
-      <img
+      <a href="https://chat.whatsapp.com/CIgKMordafmEMRqlDHS69z"><img
         class="w-full rounded-xl shadow-md"
         src="./ASSETS/flyer1.png"
         alt="Flyer da campanha"
-      />
+      /></a>
     </section>
   </main>
-
+  <!-- FOOTER -->
   <footer class="bg-gray-100">
     <div class="mx-auto max-w-6xl px-4 py-10">
       <div class="grid gap-10 text-gray-700 sm:grid-cols-2 md:grid-cols-3">
@@ -75,11 +88,10 @@
 
         <div class="flex flex-col gap-3">
           <p class="font-semibold text-gray-800">Institucional</p>
-          <a class="hover:underline" href="#">Nossa História</a>
-          <a class="hover:underline" href="#">Nossas Lojas e Serviços</a>
-          <a class="hover:underline" href="#">Canal de ética</a>
-          <a class="hover:underline" href="#">faleconosco@supermercadojp.com.br</a>
-          <a class="hover:underline" href="#">Trabalhe Conosco</a>
+          <a class="hover:underline" href="./PAGES/sobre.html">Nossa História</a>
+          <a class="hover:underline" href="./PAGES/lojas.html">Nossas Lojas e Serviços</a>
+          <a class="hover:underline text-blue-800" href="mailto:faleconosco@supermercadojp.com.br">faleconosco@supermercadojp.com.br</a>
+          <a class="hover:underline" href="./PAGES/trabalhe.html">Trabalhe Conosco</a>
         </div>
 
         <div class="flex flex-col gap-3">
@@ -87,12 +99,10 @@
           <a class="hover:underline" href="#">Termos e Condições de Uso</a>
           <a class="hover:underline" href="#">Política de Privacidade</a>
           <a class="hover:underline" href="#">Política de Cookie</a>
-          <a class="hover:underline" href="#">Canal de Solicitações de Direitos - LGPD</a>
         </div>
       </div>
-
       <div class="mt-10 border-t border-gray-200 pt-6 text-sm text-gray-500">
-        © <span id="year"></span> Supermercado JP. Todos os direitos reservados.
+        <p class="items-center">© <span class="items-center" id="year"></span> Supermercado JP. Todos os direitos reservados.</p>
       </div>
     </div>
   </footer>
