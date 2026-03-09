@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Campanha | Supermercado JP</title>
+  <link rel="icon" href="./ASSETS/favicon.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="min-h-screen w-full">
+  <!-- HEADER -->
+  <header class="bg-blue-900">
+    <div class="mx-auto max-w-6xl px-4 py-3">
+      <div class="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+        
+        <div class="flex items-center justify-between gap-4">
+          <a href="index.html">
+            <img class="w-28 sm:w-32" src="./ASSETS/logo.png" alt="Logo do Supermercado JP">
+          </a>
+
+          <div class="flex items-center gap-4 text-xl text-white sm:text-2xl md:hidden">
+            <a aria-label="WhatsApp" href="https://api.whatsapp.com/send?phone=5518996112133&text=Ol%C3%A1,%20gostaria%20de%20fazer%20uma%20compra">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a aria-label="Instagram" href="https://www.instagram.com/supermercadojp_sa/">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a aria-label="Facebook" href="https://www.facebook.com/superjp.sa">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+          </div>
+        </div>
+
+        <nav class="flex flex-col gap-2 text-white text-base sm:text-lg md:flex-row md:items-center md:gap-6">
+          <a class="hover:underline" href="#">Encontre nossas lojas</a>
+          <a class="hover:underline" href="#">Nossa história</a>
+          <a class="hover:underline" href="#">Trabalhe conosco</a>
+        </nav>
+
+        <div class="hidden md:flex md:items-center md:gap-4 md:text-2xl md:text-white">
+          <a aria-label="WhatsApp" href="https://api.whatsapp.com/send?phone=5518996112133&text=Ol%C3%A1,%20gostaria%20de%20fazer%20uma%20compra">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+          <a aria-label="Instagram" href="https://www.instagram.com/supermercadojp_sa/">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a aria-label="Facebook" href="https://www.facebook.com/superjp.sa">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-6xl px-4 py-6">
+    <section>
+      <img
+        class="w-full rounded-xl shadow-md"
+        src="./ASSETS/flyer1.png"
+        alt="Flyer da campanha"
+      />
+    </section>
+  </main>
+
+  <footer class="bg-gray-100">
+    <div class="mx-auto max-w-6xl px-4 py-10">
+      <div class="grid gap-10 text-gray-700 sm:grid-cols-2 md:grid-cols-3">
+        <div class="flex flex-col gap-3">
+          <p class="font-semibold text-gray-800">Central de Atendimento</p>
+          <a class="hover:underline" href="#">Chat com atendente</a>
+        </div>
+
+        <div class="flex flex-col gap-3">
+          <p class="font-semibold text-gray-800">Institucional</p>
+          <a class="hover:underline" href="#">Nossa História</a>
+          <a class="hover:underline" href="#">Nossas Lojas e Serviços</a>
+          <a class="hover:underline" href="#">Canal de ética</a>
+          <a class="hover:underline" href="#">faleconosco@supermercadojp.com.br</a>
+          <a class="hover:underline" href="#">Trabalhe Conosco</a>
+        </div>
+
+        <div class="flex flex-col gap-3">
+          <p class="font-semibold text-gray-800">Nossos Termos e Políticas</p>
+          <a class="hover:underline" href="#">Termos e Condições de Uso</a>
+          <a class="hover:underline" href="#">Política de Privacidade</a>
+          <a class="hover:underline" href="#">Política de Cookie</a>
+          <a class="hover:underline" href="#">Canal de Solicitações de Direitos - LGPD</a>
+        </div>
+      </div>
+
+      <div class="mt-10 border-t border-gray-200 pt-6 text-sm text-gray-500">
+        © <span id="year"></span> Supermercado JP. Todos os direitos reservados.
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
