@@ -18,60 +18,93 @@
   <!-- HEADER -->
   <header class="sticky top-0 z-50 bg-blue-900 shadow-md">
     <div class="mx-auto max-w-6xl px-4 py-3">
-      <div class="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
-        <div class="flex items-center justify-between gap-4">
-          <a href="../index.html">
-            <img class="w-28 sm:w-32" src="../ASSETS/logo.png" alt="Logo do Supermercado JP" />
-          </a>
 
-          <div class="flex items-center gap-4 text-xl text-white sm:text-2xl md:hidden">
-            <a aria-label="WhatsApp"
-              href="https://api.whatsapp.com/send?phone=5518996112133&text=Ol%C3%A1,%20gostaria%20de%20fazer%20uma%20compra">
-              <i class="fa-brands fa-whatsapp"></i>
-            </a>
-            <a aria-label="Instagram" href="https://www.instagram.com/supermercadojp_sa/">
-              <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a aria-label="Facebook" href="https://www.facebook.com/superjp.sa">
-              <i class="fa-brands fa-facebook"></i>
-            </a>
-          </div>
+      <div class="flex items-center justify-between">
+
+        <!-- botão hamburguer + logo -->
+        <div class="flex items-center gap-4">
+          <button id="menu-toggle" class="text-white text-2xl md:hidden" aria-label="Abrir menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+
+          <a href="../index.html">
+            <img class="w-28 sm:w-32" src="../ASSETS/logo.png" alt="Logo do Supermercado JP">
+          </a>
         </div>
 
-        <nav class="flex flex-col gap-2 text-white text-base sm:text-lg md:flex-row md:items-center md:gap-6">
-          <a class="relative transition-colors group" href="./lojas.html">
+        <!-- menu desktop -->
+        <nav class="hidden md:flex md:items-center md:gap-6 text-white text-base lg:text-lg">
+          <a class="group relative w-fit" href="./lojas.html">
             Encontre Nossas Lojas
             <span
               class="absolute left-0 -bottom-1 h-0.5 w-0 bg-white transition-all duration-300 group-hover:w-full"></span>
           </a>
-          <a class="relative transition-colors group" href="./sobre.html">
+
+          <a class="group relative w-fit" href="./sobre.html">
             Nossa História
             <span
               class="absolute left-0 -bottom-1 h-0.5 w-0 bg-white transition-all duration-300 group-hover:w-full"></span>
           </a>
-          <a class="relative transition-colors group" href="./trabalhe.html">
+
+          <a class="group relative w-fit" href="./trabalhe.html">
             Trabalhe Conosco
             <span
               class="absolute left-0 -bottom-1 h-0.5 w-0 bg-white transition-all duration-300 group-hover:w-full"></span>
           </a>
         </nav>
 
+        <!-- redes desktop -->
         <div class="hidden md:flex md:items-center md:gap-4 md:text-2xl md:text-white">
-          <a aria-label="WhatsApp"
-            href="https://api.whatsapp.com/send?phone=5518996112133&text=Ol%C3%A1,%20gostaria%20de%20fazer%20uma%20compra">
+          <a href="https://api.whatsapp.com/send?phone=5518996112133" target="_blank">
             <i class="fa-brands fa-whatsapp"></i>
           </a>
-          <a aria-label="Instagram" href="https://www.instagram.com/supermercadojp_sa/">
+
+          <a href="https://www.instagram.com/supermercadojp_sa/" target="_blank">
             <i class="fa-brands fa-instagram"></i>
           </a>
-          <a aria-label="Facebook" href="https://www.facebook.com/superjp.sa">
+
+          <a href="https://www.facebook.com/superjp.sa" target="_blank">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- menu mobile -->
+      <div id="mobile-menu" class="hidden md:hidden pt-4">
+        <nav class="flex flex-col gap-4 text-white text-base">
+
+          <a class="border-b border-white/20 pb-2" href="./lojas.html">
+            Encontre Nossas Lojas
+          </a>
+
+          <a class="border-b border-white/20 pb-2" href="./sobre.html">
+            Nossa História
+          </a>
+
+          <a class="border-b border-white/20 pb-2" href="./trabalhe.html">
+            Trabalhe Conosco
+          </a>
+
+        </nav>
+
+        <div class="mt-4 flex gap-5 text-2xl text-white">
+          <a href="https://api.whatsapp.com/send?phone=5518996112133">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+
+          <a href="https://www.instagram.com/supermercadojp_sa/">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+
+          <a href="https://www.facebook.com/superjp.sa">
             <i class="fa-brands fa-facebook"></i>
           </a>
         </div>
       </div>
+
     </div>
   </header>
-
   <!-- MAIN -->
   <main class="max-w-6xl mx-auto px-6 py-8 pb-16">
 
@@ -162,7 +195,7 @@
       <div class="grid gap-10 text-gray-700 sm:grid-cols-2 md:grid-cols-3">
         <div class="flex flex-col gap-3">
           <p class="font-semibold text-gray-800">Central de Atendimento</p>
-          <a class="hover:underline" href="#">Chat com atendente</a>
+          <a class="hover:underline" href="https://api.whatsapp.com/send?phone=5518996112133">Chat com atendente</a>
         </div>
 
         <div class="flex flex-col gap-3">
@@ -194,6 +227,8 @@
       </div>
     </div>
   </footer>
+
+  <script src="../SCRIPTS/scriptindex.js"></script>
 </body>
 
 </html>

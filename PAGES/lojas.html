@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,7 +9,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
@@ -16,53 +18,91 @@
   <!-- HEADER -->
   <header class="sticky top-0 z-50 bg-blue-900 shadow-md">
     <div class="mx-auto max-w-6xl px-4 py-3">
-      <div class="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
-        
-        <div class="flex items-center justify-between gap-4">
+
+      <div class="flex items-center justify-between">
+
+        <!-- botão hamburguer + logo -->
+        <div class="flex items-center gap-4">
+          <button id="menu-toggle" class="text-white text-2xl md:hidden" aria-label="Abrir menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+
           <a href="../index.html">
             <img class="w-28 sm:w-32" src="../ASSETS/logo.png" alt="Logo do Supermercado JP">
           </a>
-
-          <div class="flex items-center gap-4 text-xl text-white sm:text-2xl md:hidden">
-            <a aria-label="WhatsApp" href="https://api.whatsapp.com/send?phone=5518996112133&text=Ol%C3%A1,%20gostaria%20de%20fazer%20uma%20compra">
-              <i class="fa-brands fa-whatsapp"></i>
-            </a>
-            <a aria-label="Instagram" href="https://www.instagram.com/supermercadojp_sa/">
-              <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a aria-label="Facebook" href="https://www.facebook.com/superjp.sa">
-              <i class="fa-brands fa-facebook"></i>
-            </a>
-          </div>
         </div>
 
-        <nav class="flex flex-col gap-2 text-white text-base sm:text-lg md:flex-row md:items-center md:gap-6">
-          <a class="relative transition-colors group" href="./lojas.html">
+        <!-- menu desktop -->
+        <nav class="hidden md:flex md:items-center md:gap-6 text-white text-base lg:text-lg">
+          <a class="group relative w-fit" href="./lojas.html">
             Encontre Nossas Lojas
-            <span class="absolute left-0 -bottom-1 h-0.5 w-0 bg-white transition-all duration-300 group-hover:w-full"></span>
+            <span
+              class="absolute left-0 -bottom-1 h-0.5 w-0 bg-white transition-all duration-300 group-hover:w-full"></span>
           </a>
-          <a class="relative transition-colors group" href="./sobre.html">
+
+          <a class="group relative w-fit" href="./sobre.html">
             Nossa História
-            <span class="absolute left-0 -bottom-1 h-0.5 w-0 bg-white transition-all duration-300 group-hover:w-full"></span>
+            <span
+              class="absolute left-0 -bottom-1 h-0.5 w-0 bg-white transition-all duration-300 group-hover:w-full"></span>
           </a>
-          <a class="relative transition-colors group" href="./trabalhe.html">
+
+          <a class="group relative w-fit" href="./trabalhe.html">
             Trabalhe Conosco
-            <span class="absolute left-0 -bottom-1 h-0.5 w-0 bg-white transition-all duration-300 group-hover:w-full"></span>
+            <span
+              class="absolute left-0 -bottom-1 h-0.5 w-0 bg-white transition-all duration-300 group-hover:w-full"></span>
           </a>
         </nav>
 
+        <!-- redes desktop -->
         <div class="hidden md:flex md:items-center md:gap-4 md:text-2xl md:text-white">
-          <a aria-label="WhatsApp" href="https://api.whatsapp.com/send?phone=5518996112133&text=Ol%C3%A1,%20gostaria%20de%20fazer%20uma%20compra">
+          <a href="https://api.whatsapp.com/send?phone=5518996112133" target="_blank">
             <i class="fa-brands fa-whatsapp"></i>
           </a>
-          <a aria-label="Instagram" href="https://www.instagram.com/supermercadojp_sa/">
+
+          <a href="https://www.instagram.com/supermercadojp_sa/" target="_blank">
             <i class="fa-brands fa-instagram"></i>
           </a>
-          <a aria-label="Facebook" href="https://www.facebook.com/superjp.sa">
+
+          <a href="https://www.facebook.com/superjp.sa" target="_blank">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- menu mobile -->
+      <div id="mobile-menu" class="hidden md:hidden pt-4">
+        <nav class="flex flex-col gap-4 text-white text-base">
+
+          <a class="border-b border-white/20 pb-2" href="./lojas.html">
+            Encontre Nossas Lojas
+          </a>
+
+          <a class="border-b border-white/20 pb-2" href="./sobre.html">
+            Nossa História
+          </a>
+
+          <a class="border-b border-white/20 pb-2" href="./trabalhe.html">
+            Trabalhe Conosco
+          </a>
+
+        </nav>
+
+        <div class="mt-4 flex gap-5 text-2xl text-white">
+          <a href="https://api.whatsapp.com/send?phone=5518996112133">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+
+          <a href="https://www.instagram.com/supermercadojp_sa/">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+
+          <a href="https://www.facebook.com/superjp.sa">
             <i class="fa-brands fa-facebook"></i>
           </a>
         </div>
       </div>
+
     </div>
   </header>
 
@@ -89,42 +129,37 @@
     </h1>
 
     <!-- Imagem principal -->
-    <img 
-      src="https://lh3.googleusercontent.com/p/AF1QipNL0P20k07p0xPGDopMXu4e8dPYTO6DXyMoRUkx=s680-w680-h510-rw" 
-      alt="Supermercado JP" 
-      class="w-full rounded-2xl mb-10 shadow-md transition-transform duration-500 hover:scale-[1.01]"
-    >
+    <img src="https://lh3.googleusercontent.com/p/AF1QipNL0P20k07p0xPGDopMXu4e8dPYTO6DXyMoRUkx=s680-w680-h510-rw"
+      alt="Supermercado JP"
+      class="w-full rounded-2xl mb-10 shadow-md transition-transform duration-500 hover:scale-[1.01]">
 
     <div class="grid md:grid-cols-2 gap-12">
-        
-        <div class="space-y-2">
-            <h2 class="text-3xl font-bold text-blue-800 mb-4">Santo Anastácio/SP</h2>
 
-            <div class="text-gray-800">
-                <p class="font-bold text-[18px] mb-3">FILIAL 01 – Dr. Mario Soares</p>
+      <div class="space-y-2">
+        <h2 class="text-3xl font-bold text-blue-800 mb-4">Santo Anastácio/SP</h2>
 
-                <p class="text-[16px] leading-8 text-gray-700">
-                    R. Dr. Mario Soares, 377<br>
-                    Vila Ortega – Santo Anastácio/SP<br>
-                    Fone: <a href="tel:+1832632133" class="text-blue-800 hover:underline">(18) 3263-2133</a>
-                </p>
+        <div class="text-gray-800">
+          <p class="font-bold text-[18px] mb-3">FILIAL 01 – Dr. Mario Soares</p>
 
-                <div class="mt-4">
-                    <p class="font-bold text-[16px] text-gray-900">Horário de Funcionamento:</p>
-                    <p class="text-[16px] text-gray-700">
-                        Seg a Sáb - 8h às 19h
-                    </p>
-                </div>
+          <p class="text-[16px] leading-8 text-gray-700">
+            R. Dr. Mario Soares, 377<br>
+            Vila Ortega – Santo Anastácio/SP<br>
+            Fone: <a href="tel:+1832632133" class="text-blue-800 hover:underline">(18) 3263-2133</a>
+          </p>
 
-                <a 
-                    href="https://www.google.com/maps/place/R.+Dr.+Mario+Soares,+377,+Santo+Anast%C3%A1cio+-+SP,+19360-000/@-21.9809622,-51.6603716,17z/data=!3m1!4b1!4m6!3m5!1s0x9493e0f206274c2d:0xcf120f527f2bc4ed!8m2!3d-21.9809672!4d-51.6577967!16s%2Fg%2F11gr6gwgq1?entry=ttu&g_ep=EgoyMDI2MDMwNS4wIKXMDSoASAFQAw%3D%3D"
-                    target="_blank"
-                    class="inline-block mt-4 text-blue-800 font-bold text-[16px] hover:underline"
-                >
-                    Como chegar
-                </a>
-            </div>
+          <div class="mt-4">
+            <p class="font-bold text-[16px] text-gray-900">Horário de Funcionamento:</p>
+            <p class="text-[16px] text-gray-700">
+              Seg a Sáb - 8h às 19h
+            </p>
+          </div>
+
+          <a href="https://www.google.com/maps/place/R.+Dr.+Mario+Soares,+377,+Santo+Anast%C3%A1cio+-+SP,+19360-000/@-21.9809622,-51.6603716,17z/data=!3m1!4b1!4m6!3m5!1s0x9493e0f206274c2d:0xcf120f527f2bc4ed!8m2!3d-21.9809672!4d-51.6577967!16s%2Fg%2F11gr6gwgq1?entry=ttu&g_ep=EgoyMDI2MDMwNS4wIKXMDSoASAFQAw%3D%3D"
+            target="_blank" class="inline-block mt-4 text-blue-800 font-bold text-[16px] hover:underline">
+            Como chegar
+          </a>
         </div>
+      </div>
 
     </div>
   </main>
@@ -135,14 +170,15 @@
       <div class="grid gap-10 text-gray-700 sm:grid-cols-2 md:grid-cols-3">
         <div class="flex flex-col gap-3">
           <p class="font-semibold text-gray-800">Central de Atendimento</p>
-          <a class="hover:underline" href="#">Chat com atendente</a>
+          <a class="hover:underline" href="https://api.whatsapp.com/send?phone=5518996112133">Chat com atendente</a>
         </div>
 
         <div class="flex flex-col gap-3">
           <p class="font-semibold text-gray-800">Institucional</p>
           <a class="hover:underline" href="./sobre.html">Nossa História</a>
           <a class="hover:underline" href="./lojas.html">Nossas Lojas e Serviços</a>
-          <a class="hover:underline text-blue-800" href="mailto:faleconosco@supermercadojp.com.br">faleconosco@supermercadojp.com.br</a>
+          <a class="hover:underline text-blue-800"
+            href="mailto:faleconosco@supermercadojp.com.br">faleconosco@supermercadojp.com.br</a>
           <a class="hover:underline" href="./trabalhe.html">Trabalhe Conosco</a>
         </div>
 
@@ -166,5 +202,8 @@
       </div>
     </div>
   </footer>
+
+  <script src="../SCRIPTS/scriptindex.js"></script>
 </body>
+
 </html>
